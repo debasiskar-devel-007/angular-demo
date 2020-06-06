@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MyserviceService } from '../../service/myservice.service'
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-page1',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Page1sComponent implements OnInit {
 
-  constructor() { }
+  public randomnumber: Array<object> = [];
+  public lastexecutedtime: number = 0;
+  public servicecallcount: number = 0;
+  private randomsubscription: Subscription;
+
+  constructor(private myservice: MyserviceService) { }
 
   ngOnInit() {
+    this.randomsubscription = this.myservice.getrandomnumber().subscribe((rand: number) => {
+      let lastexecutedtime: number = Date.now();
+      this.randomnumber.push({ randnumber: rand, serviceid: this.servicecallcount, lastexecutedtime: lastexecutedtime, executiongap: lastexecutedtime - this.lastexecutedtime })
+      this.lastexecutedtime = lastexecutedtime;
+      console.log(`Rceived  random number ${rand} service id : ${this.servicecallcount} `);
+    });
+    this.servicecallcount = this.myservice.getservicecallcount();
   }
-
+  ngOnDestroy(): void {
+    this.randomsubscription.unsubscribe();
+  }
 }
