@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-// import { MyMaterialModule } from './thirdpartymodules/material-modules';
+import { DemoMaterialModule } from './thirdpartymodules/material-modules';
 import { from } from 'rxjs';
 import { HasmemoryleakComponent } from './jsmemoryleaks/hasmemoryleak/hasmemoryleak.component';
 import { Page1Component } from './jsmemoryleaks/hasmemoryleak/page1/page1.component';
@@ -20,7 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    // MyMaterialModule,
+    DemoMaterialModule,
     BrowserAnimationsModule
   ],
   providers: [],
