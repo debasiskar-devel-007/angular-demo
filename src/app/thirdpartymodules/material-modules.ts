@@ -42,7 +42,7 @@ import {
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
-    MatTreeModule,
+    MatTreeModule
     /*FormsModule,
     ReactiveFormsModule,*/
 } from '@angular/material';
@@ -90,7 +90,7 @@ import {
         MatTooltipModule,
         MatTreeModule,
         PortalModule,
-        ScrollingModule,
+        ScrollingModule
     ]
 })
 export class MaterialModule {}
