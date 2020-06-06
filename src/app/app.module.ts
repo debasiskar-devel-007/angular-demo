@@ -8,6 +8,7 @@ import { from } from 'rxjs';
 import { HasmemoryleakComponent } from './jsmemoryleaks/hasmemoryleak/hasmemoryleak.component';
 import { Page1Component } from './jsmemoryleaks/hasmemoryleak/page1/page1.component';
 import { Page2Component } from './jsmemoryleaks/hasmemoryleak/page2/page2.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { Page2Component } from './jsmemoryleaks/hasmemoryleak/page2/page2.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MaterialModule
+    MaterialModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
