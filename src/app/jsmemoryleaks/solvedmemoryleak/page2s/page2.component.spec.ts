@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HasmemoryleakComponent } from './hasmemoryleak.component';
+import { Page2Components } from './page2.component';
 
-describe('HasmemoryleakComponent', () => {
-  let component: HasmemoryleakComponent;
-  let fixture: ComponentFixture<HasmemoryleakComponent>;
+describe('Page2Component', () => {
+  let component: Page2Components;
+  let fixture: ComponentFixture<Page2Components>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HasmemoryleakComponent ]
+      declarations: [ Page2Component ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HasmemoryleakComponent);
+    fixture = TestBed.createComponent(Page2Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

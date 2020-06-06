@@ -7,15 +7,21 @@ import { DemoMaterialModule } from './thirdpartymodules/material-modules';
 import { from } from 'rxjs';
 import { HasmemoryleakComponent } from './jsmemoryleaks/hasmemoryleak/hasmemoryleak.component';
 import { Page1Component } from './jsmemoryleaks/hasmemoryleak/page1/page1.component';
+import { Page1sComponent } from './jsmemoryleaks/solvedmemoryleak/page1s/page1s.component';
 import { Page2Component } from './jsmemoryleaks/hasmemoryleak/page2/page2.component';
+import { Page2sComponent } from './jsmemoryleaks/solvedmemoryleak/page2s/page2.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HasmemoryleakComponent,
     Page1Component,
-    Page2Component
+    Page2Component,
+    HomeComponent,
+    Page1sComponent,
+    Page2sComponent
   ],
   imports: [
     BrowserModule,
