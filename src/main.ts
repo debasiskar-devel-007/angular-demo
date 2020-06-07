@@ -7,7 +7,7 @@ import { environment } from './environments/environment';
 
 if (environment.production) {
   enableProdMode();
-  // check if window exists, if you render backend window will not be available 
+  // check if window exists, if you render backend window will not be available
 
 } else {
   if (window) {
