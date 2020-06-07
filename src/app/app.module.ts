@@ -13,6 +13,7 @@ import { Page2sComponent } from './jsmemoryleaks/solvedmemoryleak/page2s/page2.c
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { TakeuntilexampleComponent } from './jsmemoryleaks/solvedmemoryleak/takeuntilexample/takeuntilexample.component';
+import { ExampleoftrackbyComponent } from './useoftrackbyinngfor/exampleoftrackby/exampleoftrackby.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { TakeuntilexampleComponent } from './jsmemoryleaks/solvedmemoryleak/take
     HomeComponent,
     Page1sComponent,
     Page2sComponent,
-    TakeuntilexampleComponent
+    TakeuntilexampleComponent,
+    ExampleoftrackbyComponent
   ],
   imports: [
     BrowserModule,
