@@ -4,6 +4,7 @@ import { Page1Component } from './jsmemoryleaks/hasmemoryleak/page1/page1.compon
 import { Page2Component } from './jsmemoryleaks/hasmemoryleak/page2/page2.component';
 import { Page1sComponent } from './jsmemoryleaks/solvedmemoryleak/page1s/page1s.component';
 import { Page2sComponent } from './jsmemoryleaks/solvedmemoryleak/page2s/page2.component';
+import { TakeuntilexampleComponent } from './jsmemoryleaks/solvedmemoryleak/takeuntilexample/takeuntilexample.component';
 import { HomeComponent } from './home/home.component';
 // import {AppComponent} from './app.component';
 
@@ -18,6 +19,7 @@ routes = [
   { path: 'jsmemoryleak/hasmemoryleak/page2', component: Page2Component },
   { path: 'jsmemoryleak/solvedmemoryleak/page1', component: Page1sComponent },
   { path: 'jsmemoryleak/solvedmemoryleak/page2', component: Page2sComponent },
+  { path: 'jsmemoryleak/solvedmemoryleak/takeuntilexample', component: TakeuntilexampleComponent },
 
 
 ];

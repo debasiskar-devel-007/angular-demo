@@ -12,6 +12,7 @@ import { Page2Component } from './jsmemoryleaks/hasmemoryleak/page2/page2.compon
 import { Page2sComponent } from './jsmemoryleaks/solvedmemoryleak/page2s/page2.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
+import { TakeuntilexampleComponent } from './jsmemoryleaks/solvedmemoryleak/takeuntilexample/takeuntilexample.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HomeComponent } from './home/home.component';
     Page2Component,
     HomeComponent,
     Page1sComponent,
-    Page2sComponent
+    Page2sComponent,
+    TakeuntilexampleComponent
   ],
   imports: [
     BrowserModule,
