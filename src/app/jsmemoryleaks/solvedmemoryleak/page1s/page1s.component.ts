@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { MyserviceService } from '../../service/myservice.service'
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { MyserviceService } from '../../service/myservice.service';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -7,19 +7,25 @@ import { Subscription } from 'rxjs';
   templateUrl: './page1.component.html',
   styleUrls: ['./page1.component.css']
 })
-export class Page1sComponent implements OnInit {
+export class Page1sComponent implements OnInit, OnDestroy {
 
   public randomnumber: Array<object> = [];
-  public lastexecutedtime: number = 0;
-  public servicecallcount: number = 0;
+  public lastexecutedtime = 0;
+  public servicecallcount = 0;
   private randomsubscription: Subscription;
 
   constructor(private myservice: MyserviceService) { }
 
   ngOnInit() {
     this.randomsubscription = this.myservice.getrandomnumber().subscribe((rand: number) => {
-      let lastexecutedtime: number = Date.now();
-      this.randomnumber.push({ randnumber: rand, serviceid: this.servicecallcount, lastexecutedtime: lastexecutedtime, executiongap: lastexecutedtime - this.lastexecutedtime })
+      const lastexecutedtime: number = Date.now();
+      const p = 9;
+      this.randomnumber.push({
+        randnumber: rand,
+        serviceid: this.servicecallcount,
+        lastexecutedtime,
+        executiongap: lastexecutedtime - this.lastexecutedtime
+      });
       this.lastexecutedtime = lastexecutedtime;
       console.log(`Rceived  random number ${rand} service id : ${this.servicecallcount} `);
     });

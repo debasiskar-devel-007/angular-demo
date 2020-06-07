@@ -13,11 +13,11 @@ let routes: Routes = [];
 
 
 routes = [
-  { path: "", component: HomeComponent },
-  { path: "jsmemoryleak/hasmemoryleak/page1", component: Page1Component },
-  { path: "jsmemoryleak/hasmemoryleak/page2", component: Page2Component },
-  { path: "jsmemoryleak/solvedmemoryleak/page1", component: Page1sComponent },
-  { path: "jsmemoryleak/solvedmemoryleak/page2", component: Page2sComponent },
+  { path: '', component: HomeComponent },
+  { path: 'jsmemoryleak/hasmemoryleak/page1', component: Page1Component },
+  { path: 'jsmemoryleak/hasmemoryleak/page2', component: Page2Component },
+  { path: 'jsmemoryleak/solvedmemoryleak/page1', component: Page1sComponent },
+  { path: 'jsmemoryleak/solvedmemoryleak/page2', component: Page2sComponent },
 
 
 ];
