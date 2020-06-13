@@ -11,11 +11,8 @@ import { PromisenobservableComponent } from './promisenobservable/promisenobserv
 // import {AppComponent} from './app.component';
 
 
-let routes: Routes = [];
 
-
-
-routes = [
+const routes = [
   { path: '', component: HomeComponent },
   { path: 'promisenobservable', component: PromisenobservableComponent },
   { path: 'jsmemoryleak/hasmemoryleak/page1', component: Page1Component },
@@ -24,6 +21,7 @@ routes = [
   { path: 'jsmemoryleak/solvedmemoryleak/page2', component: Page2sComponent },
   { path: 'jsmemoryleak/solvedmemoryleak/takeuntilexample', component: TakeuntilexampleComponent },
   { path: 'useoftrackbyinngfor/exampleoftrackby', component: ExampleoftrackbyComponent },
+  { path: 'lazyloadmodule1', loadChildren: () => import('./lazyloadmodule1/lazyloadmodule1.module').then(m => m.Lazyloadmodule1Module) }
 
 
 ];
