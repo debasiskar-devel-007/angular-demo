@@ -7,6 +7,7 @@ import { Page2sComponent } from './jsmemoryleaks/solvedmemoryleak/page2s/page2.c
 import { TakeuntilexampleComponent } from './jsmemoryleaks/solvedmemoryleak/takeuntilexample/takeuntilexample.component';
 import { ExampleoftrackbyComponent } from './useoftrackbyinngfor/exampleoftrackby/exampleoftrackby.component';
 import { HomeComponent } from './home/home.component';
+import { PromisenobservableComponent } from './promisenobservable/promisenobservable.component';
 // import {AppComponent} from './app.component';
 
 
@@ -16,6 +17,7 @@ let routes: Routes = [];
 
 routes = [
   { path: '', component: HomeComponent },
+  { path: 'promisenobservable', component: PromisenobservableComponent },
   { path: 'jsmemoryleak/hasmemoryleak/page1', component: Page1Component },
   { path: 'jsmemoryleak/hasmemoryleak/page2', component: Page2Component },
   { path: 'jsmemoryleak/solvedmemoryleak/page1', component: Page1sComponent },

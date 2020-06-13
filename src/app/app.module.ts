@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { TakeuntilexampleComponent } from './jsmemoryleaks/solvedmemoryleak/takeuntilexample/takeuntilexample.component';
 import { ExampleoftrackbyComponent } from './useoftrackbyinngfor/exampleoftrackby/exampleoftrackby.component';
+import { PromisenobservableComponent } from './promisenobservable/promisenobservable.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ExampleoftrackbyComponent } from './useoftrackbyinngfor/exampleoftrackb
     Page1sComponent,
     Page2sComponent,
     TakeuntilexampleComponent,
-    ExampleoftrackbyComponent
+    ExampleoftrackbyComponent,
+    PromisenobservableComponent
   ],
   imports: [
     BrowserModule,

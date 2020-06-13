@@ -22,6 +22,15 @@ export class MyserviceService {
     return this.randomnumber;
 
   }
+
+  getrandomnumberpromise() {
+
+    let cn = 0;
+    cn = (Math.floor(Math.random() * 10) - 1) * (Math.floor(Math.random() * 30) + 1);
+    // console.log(cn, 'cn');
+    return cn;
+
+  }
   getservicecallcount() {
     return this.servicecallcount;
   }

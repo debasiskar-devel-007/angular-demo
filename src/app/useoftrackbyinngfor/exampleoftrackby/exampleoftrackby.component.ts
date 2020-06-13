@@ -18,7 +18,12 @@ export class ExampleoftrackbyComponent implements OnInit, OnDestroy {
   constructor(private myservice: MyserviceService) { }
 
   ngOnInit() {
-    this.randomnumber = [{ id: 1, letter: 'A' }, { id: 2, letter: 'B' }, { id: 3, letter: 'C' }];
+
+    this.randomnumber = [
+      { id: 1, letter: 'A' },
+      { id: 2, letter: 'B' },
+      { id: 3, letter: 'C' }
+    ];
   }
 
   trackByFn(index, item) {
