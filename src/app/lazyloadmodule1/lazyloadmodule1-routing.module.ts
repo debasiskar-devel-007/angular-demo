@@ -8,9 +8,9 @@ import { Lazyloadc3Component } from './lazyloadc3/lazyloadc3.component';
 
 const routes: Routes = [
   { path: '', component: Lazyloadmodule1Component },
-  { path: 'lazyloadmodule1/c1', component: Lazyloadc1Component },
-  { path: 'lazyloadmodule1/c2', component: Lazyloadc2Component },
-  { path: 'lazyloadmodule1/c3', component: Lazyloadc3Component },
+  { path: 'c1', component: Lazyloadc1Component },
+  { path: 'c2', component: Lazyloadc2Component },
+  { path: 'c3', component: Lazyloadc3Component },
 ];
 
 @NgModule({
