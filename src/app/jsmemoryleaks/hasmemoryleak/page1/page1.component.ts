@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MyserviceService } from '../../service/myservice.service';
+import { MetaserviceService } from '../../../metaservice/metaservice.service';
 @Component({
   selector: 'app-page1',
   templateUrl: './page1.component.html',
@@ -10,9 +11,10 @@ export class Page1Component implements OnInit {
   public lastexecutedtime = 0;
   public servicecallcount = 0;
 
-  constructor(private myservice: MyserviceService) { }
+  constructor(private myservice: MyserviceService, private metaservive: MetaserviceService) { }
 
   ngOnInit() {
+    this.metaservive.setmeta();
     this.myservice.getrandomnumber().subscribe((rand: number) => {
       const lastexecutedtime: number = Date.now();
       this.randomnumber.push({

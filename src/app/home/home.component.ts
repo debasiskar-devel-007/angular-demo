@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MetaserviceService } from '../metaservice/metaservice.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private metaservice: MetaserviceService) { }
 
   ngOnInit() {
+    const data: object = {
+      // title: "Test title "
+    };
+    this.metaservice.setmeta(data);
   }
 
 }
