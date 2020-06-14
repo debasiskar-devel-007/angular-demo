@@ -18,7 +18,7 @@ export class MetaserviceService {
 
   constructor(private titleService: Title, private metaService: Meta) { }
 
-  setmeta(data) {
+  setmeta(data: any) {
     this.titleService.setTitle((data.title == null) ? this.defaultTitle : data.title);
     this.metaService.addTags([
       { name: 'keywords', content: (data.keywords == null) ? this.defaultKeywords : data.keywords }

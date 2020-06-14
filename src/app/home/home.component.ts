@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     const data: object = {
-      title: "Test title ",
+      title: "Test title 1 ",
       og_url: "https://www.betoparedes.com/ ",
       og_type: "blog",
       og_title: "Angular Example 1",

@@ -14,7 +14,7 @@ export class Page1Component implements OnInit {
   constructor(private myservice: MyserviceService, private metaservive: MetaserviceService) { }
 
   ngOnInit() {
-    this.metaservive.setmeta();
+    this.metaservive.setmeta({});
     this.myservice.getrandomnumber().subscribe((rand: number) => {
       const lastexecutedtime: number = Date.now();
       this.randomnumber.push({
