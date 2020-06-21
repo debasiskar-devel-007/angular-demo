@@ -14,7 +14,8 @@ import { PromisenobservableComponent } from './promisenobservable/promisenobserv
 
 const routes = [
   { path: '', component: HomeComponent },
-  { path: 'promisenobservable', component: PromisenobservableComponent },
+  { path: 'home.html', component: HomeComponent },
+  { path: 'promisenobservable.html', component: PromisenobservableComponent },
   { path: 'jsmemoryleak/hasmemoryleak/page1', component: Page1Component },
   { path: 'jsmemoryleak/hasmemoryleak/page2', component: Page2Component },
   { path: 'jsmemoryleak/solvedmemoryleak/page1', component: Page1sComponent },
