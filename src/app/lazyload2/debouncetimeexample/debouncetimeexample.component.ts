@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Subject } from 'rxjs/internal/Subject';
 import { Subscription } from 'rxjs/internal/Subscription';
-import { debounceTime, switchMap } from 'rxjs/operators';
+import { debounceTime, switchMap, mergeMap, exhaustMap, concatMap } from 'rxjs/operators';
 import { MyserviceService } from '../../jsmemoryleaks/service/myservice.service'
 
 @Component({
@@ -20,16 +20,21 @@ export class DebouncetimeexampleComponent implements OnInit {
   constructor(private myservice: MyserviceService) {
     this.subscriptions[this.subscriptioncount++] = this.modelChanged
       .pipe(
-        debounceTime(700),
-        switchMap(val => {
-          // console.log(id);
-          return this.myservice.getsquarevalue(this.quantity);
-        })
+        // debounceTime(700),
+        concatMap(data => this.myservice.getsquarevalue(this.quantity))
+        // concatMap(val => {
+        //   // switchMap(val => {
+        //   // mergeMap
+        //   // exhaustMap
+        //   // concatMap
+        //   console.log(val, 'map');
+        //   return this.myservice.getsquarevalue(this.quantity);
+        // })
       )
       .subscribe((res) => {
         // this.searchResult$ = this.api.search(this.model);
         this.doublequantity = res;
-        console.log(this.quantity, res, 'quantity in debounce block ');
+        console.log(res, 'quantity in debounce block ');
 
       });
   }
@@ -37,7 +42,7 @@ export class DebouncetimeexampleComponent implements OnInit {
   ngOnInit() {
   }
   inputchange() {
-    console.log(this.quantity, 'quantity');
+    // console.log(this.quantity, 'quantity');
     this.modelChanged.next();
     this.doublequantity = 0;
   }

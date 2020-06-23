@@ -41,8 +41,11 @@ export class MyserviceService {
   // }
   getsquarevalue(val: number): Observable<number> {
     const squarenumber = new Observable((subject: Observer<number>) => {
-      const sqn = val * val;
-      subject.next(sqn);
+      setTimeout(() => {
+        const sqn = val * val;
+        subject.next(sqn);
+      }, 500);
+
     });
     return squarenumber;
   }
