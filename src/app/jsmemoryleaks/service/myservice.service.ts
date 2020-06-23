@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, Subject, Observer } from 'rxjs';
+import { validateHorizontalPosition } from '@angular/cdk/overlay';
 
 @Injectable({
   providedIn: 'root'
@@ -33,5 +34,16 @@ export class MyserviceService {
   }
   getservicecallcount() {
     return this.servicecallcount;
+  }
+
+  // getsquarevalue(val: number) {
+  //   return (val * val);
+  // }
+  getsquarevalue(val: number): Observable<number> {
+    const squarenumber = new Observable((subject: Observer<number>) => {
+      const sqn = val * val;
+      subject.next(sqn);
+    });
+    return squarenumber;
   }
 }
