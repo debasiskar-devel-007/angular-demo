@@ -6,10 +6,11 @@ import { Lazyload2Component } from './lazyload2.component';
 import { Lazyloadc1Component } from './lazyloadc1/lazyloadc1.component';
 import { DebouncetimeexampleComponent } from './debouncetimeexample/debouncetimeexample.component';
 import { FormsModule } from '@angular/forms';
+import { FacebookComponent } from '../socoalmedia/facebook/facebook.component';
 
 
 @NgModule({
-  declarations: [Lazyload2Component, Lazyloadc1Component, DebouncetimeexampleComponent],
+  declarations: [Lazyload2Component, Lazyloadc1Component, DebouncetimeexampleComponent, FacebookComponent],
   imports: [
     CommonModule,
     Lazyload2RoutingModule,

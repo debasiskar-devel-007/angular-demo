@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Subject } from 'rxjs/internal/Subject';
 import { Subscription } from 'rxjs/internal/Subscription';
 import { debounceTime, switchMap, mergeMap, exhaustMap, concatMap } from 'rxjs/operators';
-import { MyserviceService } from '../../jsmemoryleaks/service/myservice.service'
+import { MyserviceService } from '../../jsmemoryleaks/service/myservice.service';
 
 @Component({
   selector: 'app-debouncetimeexample',
@@ -11,17 +11,17 @@ import { MyserviceService } from '../../jsmemoryleaks/service/myservice.service'
 })
 export class DebouncetimeexampleComponent implements OnInit {
   quantity: number;
-  doublequantity: number = 0;
+  doublequantity = 0;
   modelChanged = new Subject<any>();
   // modelChanged1 = new Subject<any>();
   subscriptions: Subscription[] = [];
-  subscriptioncount: number = 0;
+  subscriptioncount = 0;
 
   constructor(private myservice: MyserviceService) {
     this.subscriptions[this.subscriptioncount++] = this.modelChanged
       .pipe(
-        // debounceTime(700),
-        concatMap(data => this.myservice.getsquarevalue(this.quantity))
+        debounceTime(700),
+        switchMap(data => this.myservice.getsquarevalue(this.quantity))
         // concatMap(val => {
         //   // switchMap(val => {
         //   // mergeMap
