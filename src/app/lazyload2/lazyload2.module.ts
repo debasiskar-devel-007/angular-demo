@@ -7,14 +7,21 @@ import { Lazyloadc1Component } from './lazyloadc1/lazyloadc1.component';
 import { DebouncetimeexampleComponent } from './debouncetimeexample/debouncetimeexample.component';
 import { FormsModule } from '@angular/forms';
 import { FacebookComponent } from '../socoalmedia/facebook/facebook.component';
+import { DynamictemplateComponent } from '../dynamictemplate/dynamictemplate/dynamictemplate.component';
+import { DynmicmaterialgridComponent } from './dynmicmaterialgrid/dynmicmaterialgrid.component';
+import { DemoMaterialModule } from '../thirdpartymodules/material-modules';
 
 
 @NgModule({
-  declarations: [Lazyload2Component, Lazyloadc1Component, DebouncetimeexampleComponent, FacebookComponent],
+  declarations: [Lazyload2Component,
+    Lazyloadc1Component, DebouncetimeexampleComponent,
+    FacebookComponent, DynamictemplateComponent,
+     DynmicmaterialgridComponent],
   imports: [
     CommonModule,
     Lazyload2RoutingModule,
-    FormsModule
+    FormsModule,
+    DemoMaterialModule
   ]
 })
 export class Lazyload2Module { }
