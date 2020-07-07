@@ -115,4 +115,11 @@
                         <pre>'{{value | titlecase}}'</pre>
         </div>
     </mat-grid-tile>
+    <mat-grid-tile>
+        <div>
+            <ul>
+                <li *ngFor="let i of collection | slice:1:3">{{i}}</li>
+            </ul>
+        </div>
+    </mat-grid-tile>
 </mat-grid-list>

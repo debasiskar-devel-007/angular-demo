@@ -16,7 +16,9 @@ export class PipeexampleComponent implements OnInit {
   change(value: string) {
     this.value = value;
   }
-  object: Object = {a:'b',c:'a',n:'v', foo: 'bar', baz: 'qux', nested: { xyz: 3, numbers: [1, 2, 3, 4, 5] } };
+  collection: string[] = ['a', 'b', 'c', 'd'];
+  
+  object: Object = { a: 'b', c: 'a', n: 'v', foo: 'bar', baz: 'qux', nested: { xyz: 3, numbers: [1, 2, 3, 4, 5] } };
   constructor() { }
 
   ngOnInit() {
