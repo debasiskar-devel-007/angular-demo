@@ -10,13 +10,17 @@ import { FacebookComponent } from '../socoalmedia/facebook/facebook.component';
 import { DynamictemplateComponent } from '../dynamictemplate/dynamictemplate/dynamictemplate.component';
 import { DynmicmaterialgridComponent } from './dynmicmaterialgrid/dynmicmaterialgrid.component';
 import { DemoMaterialModule } from '../thirdpartymodules/material-modules';
+import { DemopipePipe } from '../demopipe.pipe';
+import { PipeexampleComponent } from '../lazyload/pipeexample/pipeexample.component';
 
 
 @NgModule({
   declarations: [Lazyload2Component,
     Lazyloadc1Component, DebouncetimeexampleComponent,
     FacebookComponent, DynamictemplateComponent,
-     DynmicmaterialgridComponent],
+     DynmicmaterialgridComponent,
+     DemopipePipe,
+     PipeexampleComponent],
   imports: [
     CommonModule,
     Lazyload2RoutingModule,
