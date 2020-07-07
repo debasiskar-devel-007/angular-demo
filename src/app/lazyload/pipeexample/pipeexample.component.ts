@@ -12,6 +12,10 @@ export class PipeexampleComponent implements OnInit {
   a: number = 0.259;
   b: number = 1.3495;
   today: number = Date.now();
+  value!: string;
+  change(value: string) {
+    this.value = value;
+  }
   object: Object = {a:'b',c:'a',n:'v', foo: 'bar', baz: 'qux', nested: { xyz: 3, numbers: [1, 2, 3, 4, 5] } };
   constructor() { }
 
