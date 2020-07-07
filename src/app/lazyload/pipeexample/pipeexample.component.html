@@ -85,4 +85,13 @@
             {{ object | json }} {{ object }}
         </div>
     </mat-grid-tile>
+    <mat-grid-tile>
+        <div>
+            <p>Object</p>
+    <div *ngFor="let item of object | keyvalue">
+      {{item.key}}:{{item.value}}
+    </div>
+
+        </div>
+    </mat-grid-tile>
 </mat-grid-list>
