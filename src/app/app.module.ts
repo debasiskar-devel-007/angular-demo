@@ -30,8 +30,9 @@ import { PromisenobservableComponent } from './promisenobservable/promisenobserv
     PromisenobservableComponent
   ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
-    AppRoutingModule,
+    BrowserModule,
+    // BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    AppRoutingModule, 
     DemoMaterialModule,
     BrowserAnimationsModule
   ],
