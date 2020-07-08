@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MyserviceService } from 'src/app/jsmemoryleaks/service/myservice.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-pipeexample',
@@ -6,6 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pipeexample.component.css']
 })
 export class PipeexampleComponent implements OnInit {
+  public randomnumber: Array<object> = [];
+  public lastexecutedtime = 0;
+  public servicecallcount = 0;
+  public sdata:Observable<any>;
+  public sdata1:Observable<any>;
+
 
   private dateVal: Date = new Date();
   private jsonVal: Object = { moo: 'foo', goo: { too: 'new' } };
@@ -19,9 +27,11 @@ export class PipeexampleComponent implements OnInit {
   collection: string[] = ['a', 'b', 'c', 'd'];
   
   object: Object = { a: 'b', c: 'a', n: 'v', foo: 'bar', baz: 'qux', nested: { xyz: 3, numbers: [1, 2, 3, 4, 5] } };
-  constructor() { }
+  constructor(private myservice: MyserviceService) { }
 
   ngOnInit() {
+    this.sdata=this.myservice.getrval();
+    this.sdata1=this.myservice.getrval1();
   }
 
 }
