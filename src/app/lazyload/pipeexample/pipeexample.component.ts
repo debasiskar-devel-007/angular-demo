@@ -13,6 +13,7 @@ export class PipeexampleComponent implements OnInit {
   public servicecallcount = 0;
   public sdata:Observable<any>;
   public sdata1:Observable<any>;
+  rangeval:number=10;
 
 
   private dateVal: Date = new Date();
