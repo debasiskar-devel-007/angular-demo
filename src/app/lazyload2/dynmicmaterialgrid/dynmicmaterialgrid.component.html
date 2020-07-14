@@ -1,6 +1,6 @@
 <p>Dynmic Material Grid Example !</p>
 
-<mat-grid-list [cols]="4" gutterSize="25px" rowHeight="2:1" (window:resize)="onResize($event)">
+<mat-grid-list [cols]="4" gutterSize="25px" [rowHeight]="rowHeight" (window:resize)="onResize($event)">
     <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
         {{tile.text}}
         <p style="float: right; align-content: flex-end;">dd ii</p>

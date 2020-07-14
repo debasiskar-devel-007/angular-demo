@@ -26,18 +26,22 @@ export class DynmicmaterialgridComponent implements OnInit {
     { text: 'Five', cols: 2, rows: 1, color: 'green' },
     { text: 'Five', cols: 3, rows: 1, color: 'red' },
   ];
+  rowHeight: string;
   breakpoint: number;
 
   constructor() { }
 
   ngOnInit() {
     this.breakpoint = (window.innerWidth <= 800) ? 1 : 4;
+    this.rowHeight = (window.innerWidth <= 800) ? '200px' : '700px';
     console.log(this.breakpoint, 'brkpoint', window.innerWidth);
   }
 
   onResize(event) {
     this.breakpoint = (event.target.innerWidth <= 800) ? 1 : 4;
+    this.rowHeight = (window.innerWidth <= 800) ? '200px' : '700px';
     console.log(this.breakpoint, 'brkpoint', window.innerWidth);
+    // rowHeight
   }
 
 }
